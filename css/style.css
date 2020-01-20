@@ -21,3 +21,36 @@ body {
   line-height: 2em;
   margin: 40px 0px 0px 40px;
 }
+
+input {
+  border: 1px solid black;
+  font-size: 11px;
+}
+
+form .btn {
+  background-color: red;
+  padding: 15px 50px;
+  text-transform: uppercase;
+  color: white;
+}
+
+form .btn:hover {
+  background-color: #000;
+}
+
+form .task {
+  padding: 14px 35px 14px 15px;
+}
+
+form .task:hover {
+  border-color: red;
+}
+
+ul {
+  font-size: 100px;
+  line-height: 1em;
+  margin: 30px 25px;
+}
+
+/* how to change placeholder text?
+how to change just input outline? */

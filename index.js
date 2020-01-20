@@ -5,7 +5,7 @@
 // ● Bonus 2 - Begin styling your todo list
 
 document.addEventListener("DOMContentLoaded", function() {
-  var eat = ["Make pasta", "Eat Pasta", "Wash Dishes"];
+  var eat = ["Eat", "Sleep", "Die"];
 
   //    forEach loop
   eat.forEach(function(eat, index) {
@@ -24,10 +24,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // capture value of the task input
     var taskValue = taskInput.value;
 
-    var li = document.createElement("li");
-    li.innerHTML = taskValue;
-    var userContainer = document.querySelector(".list");
+    var task = document.createElement("li");
+    task.innerHTML = taskValue + " Remove";
+    var list = document.querySelector(".list");
 
-    userContainer.appendChild(li);
+    list.appendChild(task);
+    list.addEventListener("click", function() {
+      task.remove();
+    });
   });
 });
