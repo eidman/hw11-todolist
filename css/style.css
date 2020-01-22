@@ -21,10 +21,23 @@ body {
   line-height: 2em;
 }
 
-input {
-  width: calc(50vw - 3px);
+a {
+  font-size: 30px;
+  font-weight: 400;
+  color: red;
+  text-align: center;
+}
+
+.form input {
+  width: calc(100vw);
+  padding: 40px 0px;
   font-size: 30px;
   box-sizing: border-box;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 1;
 }
 
 input[type="text"] {
@@ -37,10 +50,14 @@ input[type="text"]:focus {
   background-color: #fff;
 }
 
+button {
+  font-size: 30px;
+}
+
 form .btn {
-  margin: 0px;
+  width: 100vw;
   background-color: red;
-  padding: 50px 50px;
+  padding: 40px 0px;
   text-transform: capitalize;
   color: white;
 }
@@ -49,11 +66,11 @@ form .btn:hover {
   background-color: #000;
 }
 
-form .task {
+form .text {
   padding: 50px 35px 50px 15px;
 }
 
-form .task:hover {
+form .text:hover {
   background-color: #fff;
 }
 

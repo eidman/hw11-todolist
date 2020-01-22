@@ -14,18 +14,22 @@
     <!-- JS -->
     <script type="text/javascript" src="index.js"></script>
   </head>
-  <body>
-    <form>
-      <input class="task" type="text" placeholder="" value="" /><input
-        type="submit"
-        class="btn"
-        value="Submit"
-      />
-    </form>
 
-    <ul class="list">
-      <!-- ALL OF MY USERS ARE GOING
-        TO GO IN HERE FROM JavaScript -->
-    </ul>
+  <body>
+    <div class="main">
+      <form class="form" action="index.html" method="post">
+        <input type="text" placeholder="NEW TASK" class="task" /><button
+          type="submit"
+          class="btn"
+          value="submit"
+        >
+          ADD
+        </button>
+      </form>
+      <div class="tasksList">
+        <ul class="list"></ul>
+        <a id="clear">Clear</a>
+      </div>
+    </div>
   </body>
 </html>
