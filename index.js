@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // forEach loop
   eatSleepDie.forEach(function(eatSleepDie, index) {
     let li = document.createElement("li");
-    li.innerHTML = eatSleepDie;
+    li.innerHTML = `<input type="checkbox"><label>${eatSleepDie}</label><span class="delete"> ×</span>`;
     let container = document.querySelector(".list");
     container.appendChild(li);
   });
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function addTask(task) {
     let ul = document.querySelector("ul");
     let li = document.createElement("li");
-    li.innerHTML = `<span class="delete">×</span><input type="checkbox"><label>${task}</label>`;
+    li.innerHTML = `<input type="checkbox"><label>${task}</label><span class="delete"> ×</span>`;
     ul.appendChild(li);
     document.querySelector(".tasksList").style.display = "block";
   }
