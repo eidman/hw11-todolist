@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("ul").addEventListener("click", deleteOrTick);
   }
 
-  // submit data function
+  // TASK INPUT
   function submit(event) {
     event.preventDefault();
     let input = document.querySelector("input");
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     input.value = "";
   }
 
-  // add tasks
+  // ADD TASK
   function addTask(task) {
     let ul = document.querySelector("ul");
     let li = document.createElement("li");
@@ -40,12 +40,12 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".tasksList").style.display = "block";
   }
 
-  // clear the LIST
+  // CLEAR ALL
   function clearList(event) {
     document.querySelector("ul").innerHTML = "";
   }
 
-  // deleteTick
+  // DELETE X
   function deleteOrTick(event) {
     var className = event.target.className;
     if (className === "delete") deleteTask(event);
@@ -54,19 +54,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // delete task
+  // DELETE TASK
   function deleteTask(event) {
     let remove = event.target.parentNode;
     let parentNode = remove.parentNode;
     parentNode.removeChild(remove);
   }
 
-  // tick a task
+  // TICK TASK
   function tickTask(event) {
     const task = event.target.nextSibling;
     if (event.target.checked) {
       task.style.textDecoration = "line-through";
-      task.style.color = "#ff0000";
+      task.style.color = "red";
     } else {
       task.style.textDecoration = "none";
       task.style.color = "#000";
